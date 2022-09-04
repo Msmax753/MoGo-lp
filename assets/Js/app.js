@@ -1,33 +1,60 @@
 $ (function() {
 
-    var header = $ ("#header"),
-        introH = $ ("#intro").innerHeight (),
-        scrollOffset = $(window).scrollTop();
-
-
+    
     /*Fixed Header*/
 
-    checkScroll(scrollOffset);
+    var header = $ ("#header"),
+        intro = $("#intro"),
+        introH = intro.innerHeight (),
+        scrollPos = $(window).scrollTop();
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll load resize", function() {
 
-        scrollOffset = $(this).scrollTop();
+        introH = intro.innerHeight ();
 
-        checkScroll(scrollOffset);
-    
-    });
+        scrollPos = $(this).scrollTop();
 
-    
-    function checkScroll(scrollOffset) {
-
-        if( scrollOffset >= introH) {
+        if( scrollPos >= introH) {
             header.addClass("fixed");
         }
         
         else {
             header.removeClass("fixed");
         }
-    }
+    
+    });
+
+    var nav = $("#nav");
+    var nav_toggle = $("#nav_toggle");
+
+    $("#nav").on("click", function() {
+
+        $("#nav").removeClass("active");
+        $("#nav_toggle").removeClass("active");
+
+       
+
+    });
+
+
+
+    
+
+    var nav = $("#nav");
+    var nav_toggle = $("#nav_toggle");
+
+    $(document).mouseup(function(event) {
+
+        if ( ! nav.is(event.target) && nav.has(event.target).lenght === 0 && ! nav_toggle.is(event.target) && nav_toggle.has(event.target).lenght === 0) {
+            nav.fadeOut();
+        }
+
+    })
+
+
+
+       
+    
 
 
 
@@ -53,6 +80,28 @@ $ (function() {
 
     
 
+    /*Menu nav toggle*/
 
+    $("#nav_toggle").on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+
+        $("#nav").toggleClass("active");
+
+        
+
+    });
+
+    $("#about").on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+
+        $("#nav").toggleClass("active");
+
+    });
+
+    
 
 });

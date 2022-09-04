@@ -185,8 +185,8 @@ color: #fff;
 }
 
 
-/*Nav--toggle*/
-.nav--toggle {
+/*Nav-toggle*/
+.nav-toggle {
     position: absolute;
 
     display: none;
@@ -203,13 +203,15 @@ color: #fff;
     padding: 10px 0;
 }
 
-.nav--toggle.active .nav--toggle__item {
+.nav-toggle.active .nav-toggle__item {
     background: none;
 }
 
+.nav-toggle:focus {
+    outline: 0;
+}
 
-
-.nav--toggle__item {
+.nav-toggle__item {
     display: block;
     width: 100%;
     height: 3px;
@@ -226,8 +228,8 @@ color: #fff;
     
 }
 
-.nav--toggle__item:before,
-.nav--toggle__item:after {
+.nav-toggle__item:before,
+.nav-toggle__item:after {
     content: "";
     width: 100%;
     height: 3px;
@@ -240,21 +242,21 @@ color: #fff;
     transition: transform .2s linear;
 }
 
-.nav--toggle__item:before {
+.nav-toggle__item:before {
     top: -8px;
 }
 
-.nav--toggle__item:after {
+.nav-toggle__item:after {
     bottom: -8px;
 }
 
-.nav--toggle.active .nav--toggle__item:before {
+.nav-toggle.active .nav-toggle__item:before {
     transform-origin: left top;
     transform: rotate(45deg) translateX(-2px);
     
 }
 
-.nav--toggle.active .nav--toggle__item:after {
+.nav-toggle.active .nav-toggle__item:after {
     transform-origin: left bottom;
     transform: rotate(-45deg) translateX(-4px);
 }
@@ -1529,6 +1531,10 @@ padding: 20px 0;
         background-color: #e98f84;
     }   
 
+    .nav.active {
+        display: block;
+    }
+
     .nav__link {
         display: block;
         margin: 0;
@@ -1536,8 +1542,8 @@ padding: 20px 0;
 
     }
 
-    /*Nav--toggle*/
-    .nav--toggle{
+    /*Nav-toggle*/
+    .nav-toggle{
         display: block;
     }
 

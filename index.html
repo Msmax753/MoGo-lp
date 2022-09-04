@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
     <title>MoGo</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </head>
 <body>
 
 <header class="header" id="header">
     <div class="container">
         <div class="header_inner">
-            <div class="header__logo">Mogo</div>
+            <div class="header__logo" data-scroll="#intro">Mogo</div>
 
             <nav class="nav" id="nav">
                 <a class="nav__link" href="#" data-scroll="#about">About</a>
@@ -26,8 +29,8 @@
                 <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
             </nav>
 
-            <button class="nav--toggle" type="button">
-                <span class="nav--toggle__item">Menu
+            <button class="nav-toggle" id="nav_toggle" type="button">
+                <span class="nav-toggle__item">Menu
 
                 </span>
             </button>
@@ -859,7 +862,7 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="assets/Js/app.js"></script>
 
 
