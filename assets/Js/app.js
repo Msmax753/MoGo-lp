@@ -64,7 +64,7 @@ $ (function() {
         event.preventDefault();
 
         var $this = $(this),
-            blockId = $(this).data("scroll"),
+            blockId = $this.data("scroll"),
             blockOffset = $(blockId).offset().top;
 
     
@@ -103,5 +103,24 @@ $ (function() {
     });
 
     
+
+
+    /*Collapse*/
+
+    $("[data-collapse]").on("click", function(event) {
+        event.preventDefault();
+
+        var $this = $(this),
+            blockId = $this.data("scroll");
+        
+        $this.toggleClass("active");
+        
+
+
+
+    });
+
+
+
 
 });
