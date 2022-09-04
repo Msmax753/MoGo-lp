@@ -11,26 +11,26 @@
 </head>
 <body>
 
-<header class="header header--fixed">
+<header class="header" id="header">
     <div class="container">
         <div class="header_inner">
             <div class="header__logo">Mogo</div>
 
-            <nav class="nav">
-                <a class="nav__link active" href="#">About</a>
-                <a class="nav__link" href="#">Service</a>
-                <a class="nav__link" href="#">Work</a>
-                <a class="nav__link" href="#">Blog</a>
-                <a class="nav__link" href="#">Contact</a>
+            <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#about">About</a>
+                <a class="nav__link" href="#" data-scroll="#service">Service</a>
+                <a class="nav__link" href="#" data-scroll="#work">Work</a>
+                <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
+                <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
                 <a class="nav__link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
             </nav>
 
-            <div class="nav--toggle">
-                <span class="nav--toggle__item">
+            <button class="nav--toggle" type="button">
+                <span class="nav--toggle__item">Menu
 
                 </span>
-            </div>
+            </button>
 
 
         </div>
@@ -40,7 +40,9 @@
 
 <div class="page">
 
-    <div class="intro">
+
+    <!--Intro-->
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <h2 class="intro__suptitle">Creative Template</h2>
@@ -74,7 +76,8 @@
         </div>
     </div>
 
-    <section class="section">
+    <!--About-->
+    <section class="section" id="about">
         <div class="container">
             <div class="section__header">
                 <h3 class="section__suptitle">What we do</h3>
@@ -114,6 +117,7 @@
         </div>
     </section>
 
+    <!--Statistics-->
     <div class="statictics">
         <div class="container">
             <div class="stat">
@@ -141,8 +145,8 @@
         </div>
     </div>
 
-
-    <section class="section">
+    <!-- Services-->
+    <section class="section" id="service">
         <div class="container">
 
             <div class="section__header">
@@ -199,7 +203,7 @@
         </div>
     </section>
 
-
+    <!--Devices-->
     <section class="section section--devices">
         <div class="container">
 
@@ -217,6 +221,7 @@
         </div>
     </section>
 
+    <!--WeDo-->
     <section class="section">
         <div class="container">
 
@@ -267,7 +272,7 @@
     </section>
 
 
-
+    <!--Reviews 1-->
     <div class="section section--gray">
         <div class="container">
             <div class="reviews">
@@ -285,6 +290,7 @@
     </div>
 
 
+    <!--Team-->
     <section class="section">
         <div class="container">
             <div class="section__header">
@@ -388,6 +394,8 @@
         </div>
     </section>
 
+
+    <!--Logos-->
     <div class="section section--gray">
         <div class="container">
             <div class="logos">
@@ -414,7 +422,8 @@
     </div>
 
 
-    <section class="section">
+    <!--Works-->
+    <section class="section" id="work">
         <div class="container">
             <div class="section__header">
                 <h3 class="section__suptitle">What we do</h3>
@@ -503,6 +512,8 @@
             
     </section>
 
+
+    <!--Reviews 2-->
     <div class="section">
         <div class="container">
             <div class="reviews">
@@ -520,7 +531,7 @@
     </div>
 
 
-
+    <!--Clients-->
     <section class="section section--clients">
         
         <div class="container">
@@ -573,7 +584,8 @@
     </section>
 
 
-    <section class="section">
+    <!--Blog-->
+    <section class="section" id="blog">
         <div class="container">
             <div class="section__header">
                 <h3 class="section__suptitle">Our stories</h3>
@@ -679,6 +691,8 @@
         </div>
     </section>
 
+
+    <!--Map-->
     <section class="section section--map">
         <div class="container">
             <div class="map">
@@ -694,7 +708,9 @@
         </div>
     </section>
 
-    <footer class="footer">
+
+    <!--Footer-->
+    <footer class="footer" id="footer">
         <div class="container">
 
             <div class="footer__inner">
@@ -838,15 +854,13 @@
                 © 2016 MoGo free PSD template by <span>Laaqiq</span>
             </div>
 
-
-
-
-
         </div>
     </footer>
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/Js/app.js"></script>
 
 
 </body>
