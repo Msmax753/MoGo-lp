@@ -631,11 +631,18 @@ padding: 20px 0;
     border: 1px solid #e5e5e5;
     position: relative;
     margin-bottom: 10px;
+    
+    
+    
+    
 }
 
 .accordion__item.active 
 .accordion__content {
     display: block;
+    transition: transparent;
+    
+    
 
 }
 
@@ -708,13 +715,18 @@ padding: 20px 0;
 
 /*Reviews*/
 .reviews {
-    padding: 0 110px;
+    
     position: relative;
+}
+
+.reviews .slick-slider {
+    padding: 0 110px;
 }
 
 .reviews__item {
     position: relative;
     padding-left: 255px;
+    min-height: 210px;
 }
 
 .reviews__img {
@@ -753,16 +765,24 @@ padding: 20px 0;
     margin-right: 10px;
 }
 
-.reviews__btn {
+.slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
     font-size: 0;
     color: transparent;
+    border: 0;
+    background: none;
+    display: block;
+    cursor: pointer;
 }
 
-.reviews__btn:after {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-arrow:after {
     content: '';
     display: block;
     width: 16px;
@@ -778,14 +798,14 @@ padding: 20px 0;
     
 }
 
-.reviews__btn--prev {
+.slick-prev {
     left: 0;
-    transform:  rotate(-45deg)
+    transform:  rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slick-next {
     right: 0;
-    transform:  rotate(135deg)
+    transform:  rotate(135deg);
 }
 
 /*Social*/
@@ -1426,7 +1446,7 @@ padding: 20px 0;
 
     /*Reviews*/
 
-    .reviews {
+    .reviews .slick-slider {
         padding: 0px 60px;
         
     }
@@ -1744,11 +1764,11 @@ padding: 20px 0;
     }
 
     /*Reviews*/
-   .reviews {
+   .reviews .slick-slider {
         padding: 0;
    }
 
-   .reviews__btn {
+   .slick-arrow {
 
     top: 18%;
     }

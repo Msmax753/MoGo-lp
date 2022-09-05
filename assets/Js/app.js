@@ -24,6 +24,9 @@ $ (function() {
     
     });
 
+
+    /*Close menu after click*/
+
     var nav = $("#nav");
     var nav_toggle = $("#nav_toggle");
 
@@ -38,26 +41,8 @@ $ (function() {
 
 
 
+
     
-
-    var nav = $("#nav");
-    var nav_toggle = $("#nav_toggle");
-
-    $(document).mouseup(function(event) {
-
-        if ( ! nav.is(event.target) && nav.has(event.target).lenght === 0 && ! nav_toggle.is(event.target) && nav_toggle.has(event.target).lenght === 0) {
-            nav.fadeOut();
-        }
-
-    })
-
-
-
-       
-    
-
-
-
     /*Smooth scroll*/
 
     $("[data-scroll]").on("click", function(event) {
@@ -105,7 +90,7 @@ $ (function() {
     
 
 
-    /*Collapse*/
+    /*Collapse-accordion*/
 
     $("[data-collapse]").on("click", function(event) {
         event.preventDefault();
@@ -115,12 +100,20 @@ $ (function() {
         
         $this.toggleClass("active");
         
-
-
-
     });
 
 
+
+    /*Slider*/
+
+    $("[data-slider]").slick({
+        infinite: true,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+
+
+    });
 
 
 });
